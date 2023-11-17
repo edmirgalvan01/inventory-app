@@ -1,3 +1,10 @@
+import {
+  ReportIcon,
+  TrendingIcon,
+  TrophyIcon,
+  UserIcon,
+} from "../../components/icons";
+
 export function HomePage() {
   return (
     <>
@@ -20,17 +27,29 @@ export function HomePage() {
         <div className="homePage--info">
           <h2>Esto significa que</h2>
           <div className="homePage--info__item">
-            Sus ganancias han incrementado un <span>34%</span> con respecto al
-            ultimo mes
+            <TrendingIcon />
+            <p>
+              Sus ganancias han incrementado un <span>34%</span> con respecto al
+              ultimo mes
+            </p>
           </div>
           <div className="homePage--info__item">
-            Han obtenido un total de <span>14</span>nuevos clientes
+            <UserIcon />
+            <p>
+              Han obtenido un total de <span>14</span>nuevos clientes
+            </p>
           </div>
           <div className="homePage--info__item">
-            Sus ventas han tenido <span>$542.34</span> como promedio general
+            <ReportIcon />
+            <p>
+              Sus ventas han tenido <span>$542.34</span> como promedio general
+            </p>
           </div>
           <div className="homePage--info__item">
-            Han ganado un <span>13%</span> con respecto a su inversión
+            <TrophyIcon />
+            <p>
+              Han ganado un <span>13%</span> con respecto a su inversión
+            </p>
           </div>
         </div>
         <div className="homePage--rewards">
