@@ -1,9 +1,14 @@
 import {
+  ClientsIcon,
+  HomeIcon,
+  InventoryIcon,
   ReportIcon,
+  SalesIcon,
   TrendingIcon,
   TrophyIcon,
   UserIcon,
 } from "../../components/icons";
+import "./HomePage.css";
 
 export function HomePage() {
   return (
@@ -17,15 +22,15 @@ export function HomePage() {
         <div className="homePage--cards">
           <article className="homePage--cards__item">
             <span>El ultimo mes se vendieron</span>
-            <h3>$12,540.32</h3>
+            <h4>$12,540.32</h4>
           </article>
           <article className="homePage--cards__item">
             <span>El ultimo mes se compraron</span>
-            <h3>$8,216.93</h3>
+            <h4>$8,216.93</h4>
           </article>
         </div>
         <div className="homePage--info">
-          <h2>Esto significa que</h2>
+          <h3>Esto significa que</h3>
           <div className="homePage--info__item">
             <TrendingIcon />
             <p>
@@ -36,7 +41,7 @@ export function HomePage() {
           <div className="homePage--info__item">
             <UserIcon />
             <p>
-              Han obtenido un total de <span>14</span>nuevos clientes
+              Han obtenido un total de <span>14</span> nuevos clientes
             </p>
           </div>
           <div className="homePage--info__item">
@@ -63,11 +68,24 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
       <nav className="navbar">
-        <a href="/">Inicio</a>
-        <a href="/">Inventario</a>
-        <a href="/">Ventas</a>
-        <a href="/">Clientes</a>
+        <a href="/" className="navbar--item">
+          <HomeIcon />
+          Inicio
+        </a>
+        <a href="/" className="navbar--item">
+          <InventoryIcon />
+          Inventario
+        </a>
+        <a href="/" className="navbar--item">
+          <SalesIcon />
+          Ventas
+        </a>
+        <a href="/" className="navbar--item">
+          <ClientsIcon />
+          Clientes
+        </a>
       </nav>
     </>
   );
