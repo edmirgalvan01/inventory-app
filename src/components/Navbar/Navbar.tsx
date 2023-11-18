@@ -1,25 +1,26 @@
-import { ClientsIcon, HomeIcon, InventoryIcon, SalesIcon } from "../icons";
 import "./Navbar.css";
+import { ClientsIcon, HomeIcon, InventoryIcon, SalesIcon } from "../icons";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   return (
     <nav className="navbar">
-      <a href="/" className="navbar--item">
+      <Link to="/" className="navbar--item">
         <HomeIcon />
         Inicio
-      </a>
-      <a href="/" className="navbar--item">
+      </Link>
+      <Link to="/inventory" className="navbar--item">
         <InventoryIcon />
         Inventario
-      </a>
-      <a href="/" className="navbar--item">
+      </Link>
+      <Link to="/" className="navbar--item">
         <SalesIcon />
         Ventas
-      </a>
-      <a href="/" className="navbar--item">
+      </Link>
+      <Link to="/" className="navbar--item">
         <ClientsIcon />
         Clientes
-      </a>
+      </Link>
     </nav>
   );
 }
