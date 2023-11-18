@@ -1,0 +1,21 @@
+.navbar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--Blue, #394867);
+  box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar--item {
+  color: var(--color-white);
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
