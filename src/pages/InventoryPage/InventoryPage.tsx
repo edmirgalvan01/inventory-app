@@ -10,7 +10,7 @@ export function InventoryPage() {
     <>
       <section className="inventoryPage">
         <InventoryTitle />
-        <PrimaryButton />
+        <PrimaryButton>Nuevo producto</PrimaryButton>
         <InventoryFilters />
         <ListOfProducts />
       </section>

@@ -1,5 +1,5 @@
 import "./buttons.css";
 
-export function PrimaryButton() {
-  return <button className="primaryButton">Nuevo producto</button>;
+export function PrimaryButton({ children }: { children: string }) {
+  return <button className="primaryButton">{children}</button>;
 }

@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { InventoryPage } from "./pages/InventoryPage/InventoryPage";
+import { SalesPage } from "./pages/SalesPage/SalesPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/inventory",
     element: <InventoryPage />,
+  },
+  {
+    path: "/sales",
+    element: <SalesPage />,
   },
 ]);
 
