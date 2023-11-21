@@ -7,7 +7,7 @@ export function NewSalePage() {
   return (
     <>
       <section className="newSalePage">
-        <h1>Nuevo producto</h1>
+        <h1>Nueva venta</h1>
         <form className="newSalePage--form">
           <FieldInput
             label="Articulo"
