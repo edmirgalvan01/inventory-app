@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop Acer Aspire 5",
+    "precio": 9999.99,
+    "categoria": "Electrónica",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "Libro El Principito",
+    "precio": 149.99,
+    "categoria": "Literatura",
+    "stock": 25
+  },
+  {
+    "id": 3,
+    "nombre": "Cafetera Nespresso",
+    "precio": 1999.99,
+    "categoria": "Hogar",
+    "stock": 15
+  },
+  {
+    "id": 4,
+    "nombre": "Guitarra Acústica Yamaha",
+    "precio": 2999.99,
+    "categoria": "Música",
+    "stock": 8
+  },
+  {
+    "id": 5,
+    "nombre": "Zapatillas Nike Air Max",
+    "precio": 2499.99,
+    "categoria": "Deportes",
+    "stock": 12
+  },
+  {
+    "id": 6,
+    "nombre": "Reloj Casio G-Shock",
+    "precio": 999.99,
+    "categoria": "Accesorios",
+    "stock": 20
+  },
+  {
+    "id": 7,
+    "nombre": "Perfume Chanel N°5",
+    "precio": 3999.99,
+    "categoria": "Belleza",
+    "stock": 5
+  },
+  {
+    "id": 8,
+    "nombre": "Smartphone Samsung Galaxy S21",
+    "precio": 15999.99,
+    "categoria": "Electrónica",
+    "stock": 7
+  },
+  {
+    "id": 9,
+    "nombre": "Juego de Mesa Monopoly",
+    "precio": 499.99,
+    "categoria": "Juguetes",
+    "stock": 30
+  },
+  {
+    "id": 10,
+    "nombre": "Chamarra de Cuero",
+    "precio": 3499.99,
+    "categoria": "Moda",
+    "stock": 10
+  },
+  {
+    "id": 11,
+    "nombre": "Audífonos Sony",
+    "precio": 1499.99,
+    "categoria": "Electrónica",
+    "stock": 18
+  },
+  {
+    "id": 12,
+    "nombre": "Mochila Herschel",
+    "precio": 999.99,
+    "categoria": "Accesorios",
+    "stock": 25
+  },
+  {
+    "id": 13,
+    "nombre": "Licuadora Oster",
+    "precio": 899.99,
+    "categoria": "Hogar",
+    "stock": 20
+  },
+  {
+    "id": 14,
+    "nombre": "Teclado Logitech",
+    "precio": 599.99,
+    "categoria": "Electrónica",
+    "stock": 15
+  },
+  {
+    "id": 15,
+    "nombre": "Peluche de Oso Panda",
+    "precio": 299.99,
+    "categoria": "Juguetes",
+    "stock": 40
+  },
+  {
+    "id": 16,
+    "nombre": "Lámpara de Lava",
+    "precio": 399.99,
+    "categoria": "Hogar",
+    "stock": 10
+  },
+  {
+    "id": 17,
+    "nombre": "Bicicleta Schwinn",
+    "precio": 4999.99,
+    "categoria": "Deportes",
+    "stock": 8
+  },
+  {
+    "id": 18,
+    "nombre": "Gafas de Sol Ray-Ban",
+    "precio": 1999.99,
+    "categoria": "Accesorios",
+    "stock": 12
+  },
+  {
+    "id": 19,
+    "nombre": "Crema Nivea",
+    "precio": 99.99,
+    "categoria": "Belleza",
+    "stock": 50
+  },
+  {
+    "id": 20,
+    "nombre": "Camisa Polo",
+    "precio": 499.99,
+    "categoria": "Moda",
+    "stock": 20
+  }
+]
