@@ -4,12 +4,14 @@ import "./buttons.css";
 export function PrimaryButton({
   children,
   onClick,
+  width = "100%",
 }: {
   children: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
+  width?: string;
 }) {
   return (
-    <button className="primaryButton" onClick={onClick}>
+    <button style={{ width }} className="primaryButton" onClick={onClick}>
       {children}
     </button>
   );
