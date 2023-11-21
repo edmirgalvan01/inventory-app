@@ -1,0 +1,11 @@
+.primaryButton {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  font-weight: 600;
+}
