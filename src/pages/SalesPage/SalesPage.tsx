@@ -11,7 +11,7 @@ export function SalesPage() {
 
   return (
     <>
-      <section className="salesPage">
+      <section className="salesPage containerPage">
         <SalesTitle />
         <PrimaryButton
           onClick={() => {

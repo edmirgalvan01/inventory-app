@@ -11,7 +11,7 @@ export function InventoryPage() {
 
   return (
     <>
-      <section className="inventoryPage">
+      <section className="inventoryPage containerPage">
         <InventoryTitle />
         <PrimaryButton onClick={() => navigate("/new-product")}>
           Nuevo producto

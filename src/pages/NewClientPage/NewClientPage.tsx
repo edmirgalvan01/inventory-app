@@ -6,7 +6,7 @@ import { PrimaryButton } from "../../components/buttons/buttons";
 export function NewClientPage() {
   return (
     <>
-      <section className="newClientPage">
+      <section className="newClientPage containerPage">
         <h1>Nuevo cliente</h1>
         <form className="newClientPage--form">
           <FieldInput

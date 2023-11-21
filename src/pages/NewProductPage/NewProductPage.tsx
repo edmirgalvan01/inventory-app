@@ -6,7 +6,7 @@ import "./NewProductPage.css";
 export function NewProductPage() {
   return (
     <>
-      <section className="newProductPage">
+      <section className="newProductPage containerPage">
         <h1>Nuevo producto</h1>
         <form className="newProductPage--form">
           <FieldInput

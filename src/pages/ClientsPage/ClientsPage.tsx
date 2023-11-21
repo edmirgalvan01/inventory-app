@@ -11,7 +11,7 @@ export function ClientsPage() {
 
   return (
     <>
-      <section className="clientsPage">
+      <section className="clientsPage containerPage">
         <ClientsTitle />
         <PrimaryButton onClick={() => navigate("/new-client")}>
           Nuevo cliente

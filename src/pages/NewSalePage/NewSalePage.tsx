@@ -6,7 +6,7 @@ import { PrimaryButton } from "../../components/buttons/buttons";
 export function NewSalePage() {
   return (
     <>
-      <section className="newSalePage">
+      <section className="newSalePage containerPage">
         <h1>Nueva venta</h1>
         <form className="newSalePage--form">
           <FieldInput
