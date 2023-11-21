@@ -19,3 +19,6 @@
   gap: 5px;
   text-decoration: none;
 }
+.navbar--item.active {
+  border-bottom: 2px solid var(--color-white);
+}
