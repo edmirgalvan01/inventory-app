@@ -8,6 +8,7 @@ import { SalesPage } from "./pages/SalesPage/SalesPage";
 import { ClientsPage } from "./pages/ClientsPage/ClientsPage";
 import { NewProductPage } from "./pages/NewProductPage/NewProductPage";
 import { NewSalePage } from "./pages/NewSalePage/NewSalePage";
+import { NewClientPage } from "./pages/NewClientPage/NewClientPage";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/new-sale",
     element: <NewSalePage />,
+  },
+  {
+    path: "/new-client",
+    element: <NewClientPage />,
   },
 ]);
 
