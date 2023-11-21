@@ -17,7 +17,7 @@ export function Navbar() {
         <SalesIcon />
         Ventas
       </Link>
-      <Link to="/" className="navbar--item">
+      <Link to="/clients" className="navbar--item">
         <ClientsIcon />
         Clientes
       </Link>
