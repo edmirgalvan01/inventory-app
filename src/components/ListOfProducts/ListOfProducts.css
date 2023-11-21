@@ -3,24 +3,3 @@
   flex-direction: column;
   list-style: none;
 }
-
-.productCard {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 10px 0px;
-  align-items: center;
-  border-bottom: 2px solid var(--color-blue);
-}
-
-.productCard p {
-  color: var(--color-hard-blue);
-  text-align: center;
-  font-weight: 500;
-}
-
-.productCard small {
-  color: var(--color-blue);
-  font-size: 1rem;
-  font-weight: 700;
-}
