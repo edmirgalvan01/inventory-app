@@ -1,8 +1,17 @@
 import "./ListOfProducts.css";
 import { ProductCard } from "../ProductCard/ProductCard";
-import products from "../../mocks/products.json";
 
-export function ListOfProducts() {
+export function ListOfProducts({
+  products,
+}: {
+  products: Array<{
+    id: number;
+    name: string;
+    price: number;
+    category: string;
+    stock: number;
+  }>;
+}) {
   return (
     <ul className="listOfProducts">
       {products.map((product) => (
