@@ -4,11 +4,6 @@
   align-items: flex-start;
   gap: 10px;
 }
-.salesPage--title small {
-  color: var(--color-grey);
-  font-size: 0.7rem;
-  font-weight: 500;
-}
 .salesPage--filters label {
   display: flex;
   justify-content: space-between;

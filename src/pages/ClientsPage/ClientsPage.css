@@ -1,8 +1,3 @@
-.clientsPage--title small {
-  color: var(--color-grey);
-  font-size: 0.7rem;
-  font-weight: 500;
-}
 .clientsPage--filters {
   display: flex;
   flex-direction: column;

@@ -5,11 +5,10 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
 import initialClients from "../../mocks/clients.json";
-import { useGetNow } from "../../hooks/useGetNow";
+import { PageTitle } from "../../components/PageTitle/PageTitle";
 
 export function ClientsPage() {
   const navigate = useNavigate();
-  const now = useGetNow();
 
   const [name, setName] = useState("");
 
@@ -24,10 +23,7 @@ export function ClientsPage() {
   return (
     <>
       <section className="clientsPage containerPage">
-        <div className="clientsPage--title">
-          <h1>Todos tus clientes en un solo lugar</h1>
-          <small>Ultima actualización el {now}</small>
-        </div>
+        <PageTitle title="Todos tus clientes en un solo lugar" />
         <PrimaryButton onClick={() => navigate("/new-client")}>
           Nuevo cliente
         </PrimaryButton>

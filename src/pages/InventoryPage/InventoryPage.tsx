@@ -5,11 +5,10 @@ import { ListOfProducts } from "../../components/ListOfItems/ListOfItems";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from "react";
-import { useGetNow } from "../../hooks/useGetNow";
+import { PageTitle } from "../../components/PageTitle/PageTitle";
 
 export function InventoryPage() {
   const navigate = useNavigate();
-  const now = useGetNow();
 
   const [products] = useState(initialProducts);
   const [filters, setFilters] = useState({
@@ -53,10 +52,7 @@ export function InventoryPage() {
   return (
     <>
       <section className="inventoryPage containerPage">
-        <div className="inventoryPage--title">
-          <h1>Todo su inventario en un solo lugar</h1>
-          <small>Ultima actualización el {now}</small>
-        </div>
+        <PageTitle title="Todo su inventario en un solo lugar" />
         <PrimaryButton onClick={() => navigate("/new-product")}>
           Nuevo producto
         </PrimaryButton>

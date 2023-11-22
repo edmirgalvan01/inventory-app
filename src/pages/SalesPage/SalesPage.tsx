@@ -5,11 +5,10 @@ import { ListOfSales } from "../../components/ListOfItems/ListOfItems";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import initialSales from "../../mocks/sales.json";
-import { useGetNow } from "../../hooks/useGetNow";
+import { PageTitle } from "../../components/PageTitle/PageTitle";
 
 export function SalesPage() {
   const navigate = useNavigate();
-  const now = useGetNow();
 
   const [category, setCategory] = useState("all");
 
@@ -24,10 +23,7 @@ export function SalesPage() {
   return (
     <>
       <section className="salesPage containerPage">
-        <div className="salesPage--title">
-          <h1>Todas sus ventas en un solo lugar</h1>
-          <small>Ultima actualización el {now}</small>
-        </div>
+        <PageTitle title="Todas tus ventas en un solo lugar" />
         <PrimaryButton onClick={() => navigate("/new-sale")}>
           Nueva venta
         </PrimaryButton>
