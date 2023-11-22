@@ -1,5 +1,5 @@
 import "./ClientsPage.css";
-import { ListOfProducts } from "../../components/ListOfProducts/ListOfProducts";
+import { ListOfProducts } from "../../components/ListOfItems/ListOfItems";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { ClientsTitle } from "./components/ClientsTitle";

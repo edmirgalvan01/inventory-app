@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "product_name": "Laptop Acer Aspire 5",
+    "total": 9999.99,
+    "category": "Electrónica",
+    "quantity": 1,
+    "client": "Juan Pérez"
+  },
+  {
+    "id": 2,
+    "product_name": "Libro El Principito",
+    "total": 449.97,
+    "category": "Literatura",
+    "quantity": 3,
+    "client": "María García"
+  },
+  {
+    "id": 3,
+    "product_name": "Cafetera Nespresso",
+    "total": 3999.98,
+    "category": "Hogar",
+    "quantity": 2,
+    "client": "Carlos López"
+  },
+  {
+    "id": 4,
+    "product_name": "Guitarra Acústica Yamaha",
+    "total": 5999.98,
+    "category": "Música",
+    "quantity": 2,
+    "client": "Ana Rodríguez"
+  },
+  {
+    "id": 5,
+    "product_name": "Zapatillas Nike Air Max",
+    "total": 7499.88,
+    "category": "Deportes",
+    "quantity": 3,
+    "client": "Pedro Sánchez"
+  },
+  {
+    "id": 6,
+    "product_name": "Reloj Casio G-Shock",
+    "total": 1999.96,
+    "category": "Accesorios",
+    "quantity": 2,
+    "client": "Laura Martínez"
+  },
+  {
+    "id": 7,
+    "product_name": "Perfume Chanel N°5",
+    "total": 7999.96,
+    "category": "Belleza",
+    "quantity": 2,
+    "client": "Jorge Hernández"
+  },
+  {
+    "id": 8,
+    "product_name": "Smartphone Samsung Galaxy S21",
+    "total": 31999.96,
+    "category": "Electrónica",
+    "quantity": 2,
+    "client": "Sofía González"
+  },
+  {
+    "id": 9,
+    "product_name": "Juego de Mesa Monopoly",
+    "total": 1499.91,
+    "category": "Juguetes",
+    "quantity": 3,
+    "client": "Luis Ramírez"
+  },
+  {
+    "id": 10,
+    "product_name": "Chamarra de Cuero",
+    "total": 6999.96,
+    "category": "Moda",
+    "quantity": 2,
+    "client": "Elena Torres"
+  },
+  {
+    "id": 11,
+    "product_name": "Audífonos Sony",
+    "total": 4499.94,
+    "category": "Electrónica",
+    "quantity": 3,
+    "client": "Miguel Gómez"
+  },
+  {
+    "id": 12,
+    "product_name": "Mochila Herschel",
+    "total": 1999.96,
+    "category": "Accesorios",
+    "quantity": 2,
+    "client": "Sara Díaz"
+  },
+  {
+    "id": 13,
+    "product_name": "Licuadora Oster",
+    "total": 1799.98,
+    "category": "Hogar",
+    "quantity": 2,
+    "client": "José Fernández"
+  },
+  {
+    "id": 14,
+    "product_name": "Teclado Logitech",
+    "total": 1199.96,
+    "category": "Electrónica",
+    "quantity": 2,
+    "client": "Isabel Ruiz"
+  },
+  {
+    "id": 15,
+    "product_name": "Peluche de Oso Panda",
+    "total": 599.96,
+    "category": "Juguetes",
+    "quantity": 2,
+    "client": "David Jiménez"
+  },
+  {
+    "id": 16,
+    "product_name": "Lámpara de Lava",
+    "total": 799.98,
+    "category": "Hogar",
+    "quantity": 2,
+    "client": "Marta Sánchez"
+  },
+  {
+    "id": 17,
+    "product_name": "Bicicleta Schwinn",
+    "total": 9999.96,
+    "category": "Deportes",
+    "quantity": 2,
+    "client": "Daniel García"
+  },
+  {
+    "id": 18,
+    "product_name": "Gafas de Sol Ray-Ban",
+    "total": 3999.96,
+    "category": "Accesorios",
+    "quantity": 2,
+    "client": "Lucía Pérez"
+  },
+  {
+    "id": 19,
+    "product_name": "Crema Nivea",
+    "total": 499.95,
+    "category": "Belleza",
+    "quantity": 5,
+    "client": "Alejandro López"
+  },
+  {
+    "id": 20,
+    "product_name": "Camisa Polo",
+    "total": 999.98,
+    "category": "Moda",
+    "quantity": 2,
+    "client": "Andrea Rodríguez"
+  }
+]

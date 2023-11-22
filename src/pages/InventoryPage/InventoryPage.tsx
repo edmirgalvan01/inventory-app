@@ -2,7 +2,7 @@ import "./InventoryPage.css";
 import initialProducts from "../../mocks/products.json";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { InventoryTitle } from "./components/InventoryTitle";
-import { ListOfProducts } from "../../components/ListOfProducts/ListOfProducts";
+import { ListOfProducts } from "../../components/ListOfItems/ListOfItems";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from "react";
