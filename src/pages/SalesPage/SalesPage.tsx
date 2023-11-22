@@ -1,4 +1,5 @@
 import "./SalesPage.css";
+import { useState } from "react";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { ListOfSales } from "../../components/ListOfItems/ListOfItems";
 import { Navbar } from "../../components/Navbar/Navbar";
@@ -7,6 +8,16 @@ import initialSales from "../../mocks/sales.json";
 
 export function SalesPage() {
   const navigate = useNavigate();
+
+  const [category, setCategory] = useState("all");
+
+  const handleChangeCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setCategory(e.target.value);
+  };
+
+  const filteredSales = initialSales.filter((sale) => {
+    return category === "all" || sale.category === category;
+  });
 
   return (
     <>
@@ -22,17 +33,14 @@ export function SalesPage() {
           <h3>Buscar</h3>
           <label>
             Categoria
-            <select>
-              <option value="1">Categoria 1</option>
-              <option value="2">Categoria 2</option>
+            <select onChange={handleChangeCategory}>
+              <option value="all">Todos</option>
+              <option value="Literatura">Literatura</option>
+              <option value="Hogar">Hogar</option>
             </select>
           </label>
-          <label>
-            Fecha
-            <input type="date" />
-          </label>
         </div>
-        <ListOfSales sales={initialSales} />
+        <ListOfSales sales={filteredSales} />
       </section>
       <Navbar />
     </>
