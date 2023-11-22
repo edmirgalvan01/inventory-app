@@ -1,7 +1,8 @@
 import "./ListOfItems.css";
 import { ProductCard } from "../ProductCard/ProductCard";
-import { ProductType, SaleType } from "../../types";
+import { ClientType, ProductType, SaleType } from "../../types";
 import { SaleCard } from "../SaleCard/SaleCard";
+import { ClientCard } from "../ClientCard/ClientCard";
 
 export function ListOfProducts({ products }: { products: Array<ProductType> }) {
   return (
@@ -30,6 +31,22 @@ export function ListOfSales({ sales }: { sales: Array<SaleType> }) {
           category={sale.category}
           quantity={sale.quantity}
           client={sale.client}
+        />
+      ))}
+    </ul>
+  );
+}
+
+export function ListOfClients({ clients }: { clients: Array<ClientType> }) {
+  return (
+    <ul className="listOfProducts">
+      {clients.map((client) => (
+        <ClientCard
+          key={client.id}
+          name={client.name}
+          total={client.total}
+          address={client.address}
+          phone_number={client.phone_number}
         />
       ))}
     </ul>

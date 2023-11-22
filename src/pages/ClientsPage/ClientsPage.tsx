@@ -1,10 +1,11 @@
 import "./ClientsPage.css";
-import { ListOfProducts } from "../../components/ListOfItems/ListOfItems";
+import { ListOfClients } from "../../components/ListOfItems/ListOfItems";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { ClientsTitle } from "./components/ClientsTitle";
 import { ClientsFilters } from "./components/ClientsFilters";
 import { useNavigate } from "react-router-dom";
+import initialClients from "../../mocks/clients.json";
 
 export function ClientsPage() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export function ClientsPage() {
           Nuevo cliente
         </PrimaryButton>
         <ClientsFilters />
-        <ListOfProducts />
+        <ListOfClients clients={initialClients} />
       </section>
       <Navbar />
     </>

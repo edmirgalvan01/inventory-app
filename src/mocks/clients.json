@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Pérez",
+    "total": 9999.99,
+    "address": "Av. Juárez 123, Col. Centro, Poza Rica, Veracruz",
+    "phone_number": 7821234567
+  },
+  {
+    "id": 2,
+    "name": "María García",
+    "total": 449.97,
+    "address": "Calle Morelos 456, Col. Reforma, Poza Rica, Veracruz",
+    "phone_number": 7822345678
+  },
+  {
+    "id": 3,
+    "name": "Carlos López",
+    "total": 3999.98,
+    "address": "Calle Hidalgo 789, Col. Obrera, Poza Rica, Veracruz",
+    "phone_number": 7823456789
+  },
+  {
+    "id": 4,
+    "name": "Ana Rodríguez",
+    "total": 5999.98,
+    "address": "Calle Zaragoza 101, Col. Petromex, Poza Rica, Veracruz",
+    "phone_number": 7824567890
+  },
+  {
+    "id": 5,
+    "name": "Pedro Sánchez",
+    "total": 7499.88,
+    "address": "Calle Independencia 202, Col. Cazones, Poza Rica, Veracruz",
+    "phone_number": 7825678901
+  },
+  {
+    "id": 6,
+    "name": "Laura Martínez",
+    "total": 1999.96,
+    "address": "Calle Madero 303, Col. Tajín, Poza Rica, Veracruz",
+    "phone_number": 7826789012
+  },
+  {
+    "id": 7,
+    "name": "Jorge Hernández",
+    "total": 7999.96,
+    "address": "Calle Guerrero 404, Col. Chapultepec, Poza Rica, Veracruz",
+    "phone_number": 7827890123
+  },
+  {
+    "id": 8,
+    "name": "Sofía González",
+    "total": 31999.96,
+    "address": "Calle Allende 505, Col. Nacional, Poza Rica, Veracruz",
+    "phone_number": 7828901234
+  },
+  {
+    "id": 9,
+    "name": "Luis Ramírez",
+    "total": 1499.91,
+    "address": "Calle Aldama 606, Col. Tepeyac, Poza Rica, Veracruz",
+    "phone_number": 7829012345
+  },
+  {
+    "id": 10,
+    "name": "Elena Torres",
+    "total": 6999.96,
+    "address": "Calle Bravo 707, Col. Palmas, Poza Rica, Veracruz",
+    "phone_number": 7820123456
+  },
+  {
+    "id": 11,
+    "name": "Miguel Gómez",
+    "total": 4499.94,
+    "address": "Calle Matamoros 808, Col. Laredo, Poza Rica, Veracruz",
+    "phone_number": 7821234568
+  },
+  {
+    "id": 12,
+    "name": "Sara Díaz",
+    "total": 1999.96,
+    "address": "Calle Victoria 909, Col. Magisterial, Poza Rica, Veracruz",
+    "phone_number": 7822345679
+  },
+  {
+    "id": 13,
+    "name": "José Fernández",
+    "total": 1799.98,
+    "address": "Calle Lerdo 1010, Col. División del Norte, Poza Rica, Veracruz",
+    "phone_number": 7823456780
+  },
+  {
+    "id": 14,
+    "name": "Isabel Ruiz",
+    "total": 1199.96,
+    "address": "Calle Abasolo 1111, Col. Manuel Ávila Camacho, Poza Rica, Veracruz",
+    "phone_number": 7824567891
+  },
+  {
+    "id": 15,
+    "name": "David Jiménez",
+    "total": 599.96,
+    "address": "Calle Arteaga 1212, Col. 27 de Septiembre, Poza Rica, Veracruz",
+    "phone_number": 7825678902
+  },
+  {
+    "id": 16,
+    "name": "Marta Sánchez",
+    "total": 799.98,
+    "address": "Calle Carranza 1313, Col. Miguel Hidalgo, Poza Rica, Veracruz",
+    "phone_number": 7826789013
+  },
+  {
+    "id": 17,
+    "name": "Daniel García",
+    "total": 9999.96,
+    "address": "Calle Zapata 1414, Col. Benito Juárez, Poza Rica, Veracruz",
+    "phone_number": 7827890124
+  },
+  {
+    "id": 18,
+    "name": "Lucía Pérez",
+    "total": 3999.96,
+    "address": "Calle Ocampo 1515, Col. Emiliano Zapata, Poza Rica, Veracruz",
+    "phone_number": 7828901235
+  },
+  {
+    "id": 19,
+    "name": "Alejandro López",
+    "total": 499.95,
+    "address": "Calle Morelos 1616, Col. Francisco I. Madero, Poza Rica, Veracruz",
+    "phone_number": 7829012346
+  },
+  {
+    "id": 20,
+    "name": "Andrea Rodríguez",
+    "total": 999.98,
+    "address": "Calle Zaragoza 1717, Col. Lázaro Cárdenas, Poza Rica, Veracruz",
+    "phone_number": 7820123457
+  }
+]
