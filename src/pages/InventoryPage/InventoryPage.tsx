@@ -1,14 +1,15 @@
 import "./InventoryPage.css";
 import initialProducts from "../../mocks/products.json";
 import { Navbar } from "../../components/Navbar/Navbar";
-import { InventoryTitle } from "./components/InventoryTitle";
 import { ListOfProducts } from "../../components/ListOfItems/ListOfItems";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from "react";
+import { useGetNow } from "../../hooks/useGetNow";
 
 export function InventoryPage() {
   const navigate = useNavigate();
+  const now = useGetNow();
 
   const [products] = useState(initialProducts);
   const [filters, setFilters] = useState({
@@ -52,7 +53,10 @@ export function InventoryPage() {
   return (
     <>
       <section className="inventoryPage containerPage">
-        <InventoryTitle />
+        <div className="inventoryPage--title">
+          <h1>Todo su inventario en un solo lugar</h1>
+          <small>Ultima actualización el {now}</small>
+        </div>
         <PrimaryButton onClick={() => navigate("/new-product")}>
           Nuevo producto
         </PrimaryButton>

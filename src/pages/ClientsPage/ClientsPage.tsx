@@ -3,12 +3,13 @@ import { useState, ChangeEvent } from "react";
 import { ListOfClients } from "../../components/ListOfItems/ListOfItems";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { PrimaryButton } from "../../components/buttons/buttons";
-import { ClientsTitle } from "./components/ClientsTitle";
 import { useNavigate } from "react-router-dom";
 import initialClients from "../../mocks/clients.json";
+import { useGetNow } from "../../hooks/useGetNow";
 
 export function ClientsPage() {
   const navigate = useNavigate();
+  const now = useGetNow();
 
   const [name, setName] = useState("");
 
@@ -23,7 +24,10 @@ export function ClientsPage() {
   return (
     <>
       <section className="clientsPage containerPage">
-        <ClientsTitle />
+        <div className="clientsPage--title">
+          <h1>Todos tus clientes en un solo lugar</h1>
+          <small>Ultima actualización el {now}</small>
+        </div>
         <PrimaryButton onClick={() => navigate("/new-client")}>
           Nuevo cliente
         </PrimaryButton>
