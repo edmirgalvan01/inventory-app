@@ -5,6 +5,7 @@ export type SaleType = {
   category: string;
   quantity: number;
   client: string;
+  date: string;
 };
 
 export type ProductType = {

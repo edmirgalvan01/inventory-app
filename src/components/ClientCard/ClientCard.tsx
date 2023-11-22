@@ -1,33 +1,24 @@
+import { ClientType } from "../../types";
 import "./ClientCard.css";
 
-export function ClientCard({
-  name,
-  total,
-  address,
-  phone_number,
-}: {
-  name: string;
-  total: number;
-  address: string;
-  phone_number: number;
-}) {
+export function ClientCard({ client }: { client: ClientType }) {
   return (
     <li className="clientCard">
       <div className="clientCard--item">
         <p>Nombre</p>
-        <small>{name}</small>
+        <small>{client.name}</small>
       </div>
       <div className="clientCard--item">
         <p>Compras</p>
-        <small>${total}</small>
+        <small>${client.total}</small>
       </div>
       <div className="clientCard--item">
         <p>Direccion</p>
-        <small>{address}</small>
+        <small>{client.address}</small>
       </div>
       <div className="clientCard--item">
         <p>Numero de telefono</p>
-        <small>{phone_number}</small>
+        <small>{client.phone_number}</small>
       </div>
       <div className="clientCard--buttons">
         <button className="edit">Editar</button>

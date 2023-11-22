@@ -8,13 +8,7 @@ export function ListOfProducts({ products }: { products: Array<ProductType> }) {
   return (
     <ul className="listOfProducts">
       {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          name={product.name}
-          price={product.price}
-          category={product.category}
-          stock={product.stock}
-        />
+        <ProductCard key={product.id} product={product} />
       ))}
     </ul>
   );
@@ -24,14 +18,7 @@ export function ListOfSales({ sales }: { sales: Array<SaleType> }) {
   return (
     <ul className="listOfProducts">
       {sales.map((sale) => (
-        <SaleCard
-          key={sale.id}
-          product_name={sale.product_name}
-          total={sale.total}
-          category={sale.category}
-          quantity={sale.quantity}
-          client={sale.client}
-        />
+        <SaleCard key={sale.id} sale={sale} />
       ))}
     </ul>
   );
@@ -41,13 +28,7 @@ export function ListOfClients({ clients }: { clients: Array<ClientType> }) {
   return (
     <ul className="listOfProducts">
       {clients.map((client) => (
-        <ClientCard
-          key={client.id}
-          name={client.name}
-          total={client.total}
-          address={client.address}
-          phone_number={client.phone_number}
-        />
+        <ClientCard key={client.id} client={client} />
       ))}
     </ul>
   );

@@ -1,39 +1,32 @@
+import { SaleType } from "../../types";
 import "./SaleCard.css";
 
-export function SaleCard({
-  product_name,
-  total,
-  category,
-  quantity,
-  client,
-}: {
-  product_name: string;
-  total: number;
-  category: string;
-  quantity: number;
-  client: string;
-}) {
+export function SaleCard({ sale }: { sale: SaleType }) {
   return (
     <li className="saleCard">
       <div className="saleCard--item">
         <p>Producto</p>
-        <small>{product_name}</small>
+        <small>{sale.product_name}</small>
       </div>
       <div className="saleCard--item">
         <p>Total</p>
-        <small>${total}</small>
+        <small>${sale.total}</small>
       </div>
       <div className="saleCard--item">
         <p>Categoria</p>
-        <small>{category}</small>
+        <small>{sale.category}</small>
       </div>
       <div className="saleCard--item">
         <p>Cantidad</p>
-        <small>{quantity}</small>
+        <small>{sale.quantity}</small>
+      </div>
+      <div className="saleCard--item">
+        <p>Fecha</p>
+        <small>{sale.date}</small>
       </div>
       <div className="saleCard--item">
         <p>Cliente</p>
-        <small>{client}</small>
+        <small>{sale.client}</small>
       </div>
       <div className="saleCard--buttons">
         <button className="edit">Editar</button>
