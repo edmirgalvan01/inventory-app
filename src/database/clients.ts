@@ -1,7 +1,7 @@
 import { supabase } from "./supabase";
 
-export async function getSales() {
-  const { error, data } = await supabase.from("sales").select("*");
+export async function getClients() {
+  const { error, data } = await supabase.from("clients").select("*");
 
   if (error) {
     return { success: false, error: error.message, data: null };

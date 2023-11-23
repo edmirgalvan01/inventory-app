@@ -1,22 +1,19 @@
 import "./ClientsPage.css";
-import { useState, ChangeEvent } from "react";
-import { ListOfClients } from "../../components/ListOfItems/ListOfItems";
+import { useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
-import initialClients from "../../mocks/clients.json";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
+import { useGetClients } from "../../hooks/useGetClients";
+import { ListOfItems } from "../../components/ListOfItems/ListOfItems";
 
 export function ClientsPage() {
   const navigate = useNavigate();
+  const { clients, error, isLoading } = useGetClients();
 
   const [name, setName] = useState("");
 
-  const handleChangeName = (e: ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
-  };
-
-  const filteredClients = initialClients.filter((client) =>
+  const filteredClients = clients.filter((client) =>
     client.name.includes(name)
   );
 
@@ -34,11 +31,16 @@ export function ClientsPage() {
             <input
               type="text"
               placeholder="Edmir Galvan..."
-              onChange={handleChangeName}
+              onChange={(e) => setName(e.target.value)}
             />
           </label>
         </div>
-        <ListOfClients clients={filteredClients} />
+        <ListOfItems
+          type="CLIENTS"
+          items={filteredClients}
+          isLoading={isLoading}
+          error={error}
+        />
       </section>
       <Navbar />
     </>
