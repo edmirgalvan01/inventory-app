@@ -4,16 +4,6 @@ import { ClientType, ProductType, SaleType } from "../../types";
 import { SaleCard } from "../SaleCard/SaleCard";
 import { ClientCard } from "../ClientCard/ClientCard";
 
-export function ListOfSales({ sales }: { sales: Array<SaleType> }) {
-  return (
-    <ul className="listOfProducts">
-      {sales.map((sale) => (
-        <SaleCard key={sale.id} sale={sale} />
-      ))}
-    </ul>
-  );
-}
-
 export function ListOfClients({ clients }: { clients: Array<ClientType> }) {
   return (
     <ul className="listOfProducts">

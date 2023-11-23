@@ -1,22 +1,20 @@
 import "./SalesPage.css";
 import { useState } from "react";
 import { PrimaryButton } from "../../components/buttons/buttons";
-import { ListOfSales } from "../../components/ListOfItems/ListOfItems";
+import { ListOfItems } from "../../components/ListOfItems/ListOfItems";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-import initialSales from "../../mocks/sales.json";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
+import { useGetSales } from "../../hooks/useGetSales";
 
 export function SalesPage() {
   const navigate = useNavigate();
 
+  const { sales, error, isLoading } = useGetSales();
+
   const [category, setCategory] = useState("all");
 
-  const handleChangeCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setCategory(e.target.value);
-  };
-
-  const filteredSales = initialSales.filter((sale) => {
+  const filteredSales = sales.filter((sale) => {
     return category === "all" || sale.category === category;
   });
 
@@ -31,14 +29,19 @@ export function SalesPage() {
           <h3>Buscar</h3>
           <label>
             Categoria
-            <select onChange={handleChangeCategory}>
+            <select onChange={(e) => setCategory(e.target.value)}>
               <option value="all">Todos</option>
-              <option value="Literatura">Literatura</option>
-              <option value="Hogar">Hogar</option>
+              <option value="Pintura">Pintura</option>
+              <option value="Herramienta">Herramienta</option>
             </select>
           </label>
         </div>
-        <ListOfSales sales={filteredSales} />
+        <ListOfItems
+          type="SALES"
+          items={filteredSales}
+          isLoading={isLoading}
+          error={error}
+        />
       </section>
       <Navbar />
     </>
