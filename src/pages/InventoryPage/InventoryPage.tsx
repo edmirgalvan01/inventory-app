@@ -1,6 +1,6 @@
 import "./InventoryPage.css";
 import { Navbar } from "../../components/Navbar/Navbar";
-import { ListOfProducts } from "../../components/ListOfItems/ListOfItems";
+import { ListOfItems } from "../../components/ListOfItems/ListOfItems";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -10,7 +10,7 @@ import { useGetProducts } from "../../hooks/useGetProducts";
 export function InventoryPage() {
   const navigate = useNavigate();
 
-  const { products, error } = useGetProducts();
+  const { products, error, isLoading } = useGetProducts();
   const [category, setCategory] = useState("all");
 
   const filterProducts = products.filter((product) => {
@@ -35,11 +35,12 @@ export function InventoryPage() {
             </select>
           </label>
         </div>
-        {error ? (
-          <p>Hubo un error {error}</p>
-        ) : (
-          <ListOfProducts products={filterProducts} />
-        )}
+        <ListOfItems
+          type="PRODUCTS"
+          items={filterProducts}
+          isLoading={isLoading}
+          error={error}
+        />
       </section>
       <Navbar />
     </>
