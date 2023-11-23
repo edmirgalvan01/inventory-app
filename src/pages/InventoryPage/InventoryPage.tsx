@@ -1,16 +1,17 @@
 import "./InventoryPage.css";
-import initialProducts from "../../mocks/products.json";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { ListOfProducts } from "../../components/ListOfItems/ListOfItems";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from "react";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
+import { ProductType } from "../../types";
+import { useGetProducts } from "../../hooks/useGetProducts";
 
 export function InventoryPage() {
   const navigate = useNavigate();
+  const { products, error } = useGetProducts();
 
-  const [products] = useState(initialProducts);
   const [filters, setFilters] = useState({
     minPrice: 0,
     category: "all",
@@ -32,15 +33,7 @@ export function InventoryPage() {
     });
   };
 
-  const filterProducts = (
-    products: Array<{
-      id: number;
-      name: string;
-      price: number;
-      category: string;
-      stock: number;
-    }>
-  ) => {
+  const filterProducts = (products: Array<ProductType>) => {
     return products.filter((product) => {
       return (
         product.price >= filters.minPrice &&
@@ -77,7 +70,11 @@ export function InventoryPage() {
             <small>${filters.minPrice}</small>
           </label>
         </div>
-        <ListOfProducts products={filterProducts(products)} />
+        {error ? (
+          <p>Hubo un error {error}</p>
+        ) : (
+          <ListOfProducts products={filterProducts(products)} />
+        )}
       </section>
       <Navbar />
     </>
