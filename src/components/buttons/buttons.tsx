@@ -7,7 +7,7 @@ export function PrimaryButton({
   width = "100%",
 }: {
   children: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   width?: string;
 }) {
   return (

@@ -1,4 +1,3 @@
-import { ProductType } from "../types";
 import { supabase } from "./supabase";
 
 export async function getProducts() {
@@ -24,7 +23,15 @@ export async function getProductById(id: string) {
   }
 }
 
-export async function updateProduct(id: string, newProduct: ProductType) {
+export async function updateProduct(
+  id: number,
+  newProduct: {
+    name: string;
+    price: string | number;
+    stock: string | number;
+    category: string;
+  }
+) {
   const { data, error } = await supabase
     .from("products")
     .update(newProduct)
