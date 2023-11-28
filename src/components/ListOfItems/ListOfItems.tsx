@@ -21,6 +21,7 @@ export function ListOfItems({
   error,
 }: ListOfItemsProps) {
   if (isLoading) return <p>Cargando...</p>;
+  if (items.length === 0) return <p>No hay registros</p>;
   if (error) return <p>Hubo un error {error}</p>;
 
   return (
