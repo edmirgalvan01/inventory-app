@@ -1,7 +1,10 @@
-import { SaleType } from "../../types";
 import "./SaleCard.css";
+import { SaleType } from "../../types";
+import { useNavigate } from "react-router-dom";
 
 export function SaleCard({ sale }: { sale: SaleType }) {
+  const navigate = useNavigate();
+
   return (
     <li className="saleCard">
       <div className="saleCard--item">
@@ -25,7 +28,12 @@ export function SaleCard({ sale }: { sale: SaleType }) {
         <small>{sale.date}</small>
       </div>
       <div className="saleCard--buttons">
-        <button className="edit">Editar</button>
+        <button
+          className="edit"
+          onClick={() => navigate(`/edit-sale/${sale.id}`)}
+        >
+          Editar
+        </button>
         <button className="delete">Eliminar</button>
       </div>
     </li>

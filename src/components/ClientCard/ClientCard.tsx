@@ -1,7 +1,10 @@
-import { ClientType } from "../../types";
 import "./ClientCard.css";
+import { ClientType } from "../../types";
+import { useNavigate } from "react-router-dom";
 
 export function ClientCard({ client }: { client: ClientType }) {
+  const navigate = useNavigate();
+
   return (
     <li className="clientCard">
       <div className="clientCard--item">
@@ -21,7 +24,12 @@ export function ClientCard({ client }: { client: ClientType }) {
         <small>{client.phone_number}</small>
       </div>
       <div className="clientCard--buttons">
-        <button className="edit">Editar</button>
+        <button
+          className="edit"
+          onClick={() => navigate(`/edit-client/${client.id}`)}
+        >
+          Editar
+        </button>
         <button className="delete">Eliminar</button>
       </div>
     </li>
