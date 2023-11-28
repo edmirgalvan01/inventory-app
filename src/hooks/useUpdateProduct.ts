@@ -1,8 +1,12 @@
+import { toast } from "sonner";
 import { updateProduct } from "../database/products";
 import { ProductType } from "../types";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function useUpdateProduct(product: ProductType) {
+  const navigate = useNavigate();
+
   const [newProduct, setNewProduct] = useState({
     name: "",
     price: "",
@@ -24,7 +28,16 @@ export function useUpdateProduct(product: ProductType) {
       category: newProduct.category || product?.category,
     };
 
-    updateProduct(product.id, productToSubmit);
+    updateProduct(product.id, productToSubmit).then(({ success, error }) => {
+      if (!success) {
+        toast.error(error);
+      } else {
+        toast.success("Producto actualizado correctamente");
+        setTimeout(() => {
+          navigate(-1);
+        }, 1500);
+      }
+    });
   };
 
   return { updateNewProduct: handleChangeField, handleSubmit };

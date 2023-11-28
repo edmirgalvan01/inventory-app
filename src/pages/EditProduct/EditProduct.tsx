@@ -5,6 +5,7 @@ import { PrimaryButton } from "../../components/buttons/buttons";
 import { FieldInput } from "../../components/Field/Field";
 import { useUpdateProduct } from "../../hooks/useUpdateProduct";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { Toaster } from "sonner";
 
 export function EditProduct() {
   const { productId } = useParams();
@@ -42,6 +43,7 @@ export function EditProduct() {
           <PrimaryButton>Editar producto</PrimaryButton>
         </form>
       </section>
+      <Toaster richColors position="top-center" />
       <Navbar />
     </>
   );
