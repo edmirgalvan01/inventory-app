@@ -44,3 +44,13 @@ export async function updateProduct(
     return { success: true, data: data, error: null };
   }
 }
+
+export async function deleteProduct(id: string) {
+  const { error } = await supabase.from("products").delete().eq("id", id);
+
+  if (error) {
+    return { success: false, error: error.message, data: null };
+  } else {
+    return { success: true, data: null, error: null };
+  }
+}
