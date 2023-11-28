@@ -3,19 +3,14 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { ListOfItems } from "../../components/ListOfItems/ListOfItems";
 import { PrimaryButton } from "../../components/buttons/buttons";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 import { useGetProducts } from "../../hooks/useGetProducts";
+import { useSearchProducts } from "../../hooks/useSearchProducts";
 
 export function InventoryPage() {
   const navigate = useNavigate();
-
   const { products, error, isLoading } = useGetProducts();
-  const [category, setCategory] = useState("all");
-
-  const filterProducts = products.filter((product) => {
-    return category === "all" || product.category === category;
-  });
+  const { filteredProducts, updateQuery } = useSearchProducts(products);
 
   return (
     <>
@@ -25,19 +20,16 @@ export function InventoryPage() {
           Nuevo producto
         </PrimaryButton>
         <div className="inventoryPage--filters">
-          <h3>Ordenar por</h3>
-          <label>
-            Categoria
-            <select onChange={(e) => setCategory(e.target.value)}>
-              <option value="all">Todas</option>
-              <option value="Pintura">Pintura</option>
-              <option value="Herramienta">Herramienta</option>
-            </select>
-          </label>
+          <h3>Buscar por nombre</h3>
+          <input
+            type="text"
+            placeholder="Pintura azul..."
+            onChange={(e) => updateQuery(e.target.value)}
+          />
         </div>
         <ListOfItems
           type="product"
-          items={filterProducts}
+          items={filteredProducts}
           isLoading={isLoading}
           error={error}
         />
