@@ -10,7 +10,9 @@ export function useGetProductById(id: string) {
   useEffect(() => {
     getProductById(id)
       .then(({ success, data, error }) => {
-        success ? setProduct(data as unknown as ProductType) : setError(error);
+        console.log({ data });
+
+        success ? setProduct(data![0] as ProductType) : setError(error);
       })
       .finally(() => {
         setIsLoading(false);

@@ -10,7 +10,7 @@ export function useGetSaleById(id: string) {
   useEffect(() => {
     getSaleById(id)
       .then(({ success, data, error }) => {
-        success ? setSale(data as unknown as SaleType) : setError(error);
+        success ? setSale(data![0] as SaleType) : setError(error);
       })
       .finally(() => {
         setIsLoading(false);

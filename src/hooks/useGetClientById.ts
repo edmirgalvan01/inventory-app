@@ -10,7 +10,7 @@ export function useGetClientById(id: string) {
   useEffect(() => {
     getClientById(id)
       .then(({ success, data, error }) => {
-        success ? setClient(data as unknown as ClientType) : setError(error);
+        success ? setClient(data![0] as ClientType) : setError(error);
       })
       .finally(() => {
         setIsLoading(false);
