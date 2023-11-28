@@ -9,6 +9,9 @@ import { ClientsPage } from "./pages/ClientsPage/ClientsPage";
 import { NewProductPage } from "./pages/NewProductPage/NewProductPage";
 import { NewSalePage } from "./pages/NewSalePage/NewSalePage";
 import { NewClientPage } from "./pages/NewClientPage/NewClientPage";
+import { EditProduct } from "./pages/EditProduct/EditProduct";
+import { EditClient } from "./pages/EditClient/EditClient";
+import { EditSale } from "./pages/EditSale/EditSale";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
   {
     path: "/new-client",
     element: <NewClientPage />,
+  },
+  {
+    path: "/edit-product/:productId",
+    element: <EditProduct />,
+  },
+  {
+    path: "/edit-client/:clientId",
+    element: <EditClient />,
+  },
+  {
+    path: "/edit-sale/:saleId",
+    element: <EditSale />,
   },
 ]);
 
