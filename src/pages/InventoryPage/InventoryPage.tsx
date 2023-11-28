@@ -36,7 +36,7 @@ export function InventoryPage() {
           </label>
         </div>
         <ListOfItems
-          type="PRODUCTS"
+          type="product"
           items={filterProducts}
           isLoading={isLoading}
           error={error}

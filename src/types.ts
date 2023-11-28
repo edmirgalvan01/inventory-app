@@ -23,3 +23,5 @@ export type ClientType = {
   address: string;
   phone_number: number;
 };
+
+export type ItemTypes = "product" | "client" | "sale";

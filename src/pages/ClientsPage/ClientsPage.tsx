@@ -36,7 +36,7 @@ export function ClientsPage() {
           </label>
         </div>
         <ListOfItems
-          type="CLIENTS"
+          type="client"
           items={filteredClients}
           isLoading={isLoading}
           error={error}

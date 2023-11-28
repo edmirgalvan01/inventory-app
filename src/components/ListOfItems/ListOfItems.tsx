@@ -1,13 +1,14 @@
 import "./ListOfItems.css";
 import { ProductCard } from "../ProductCard/ProductCard";
-import { ClientType, ProductType, SaleType } from "../../types";
+import { ClientType, ItemTypes, ProductType, SaleType } from "../../types";
 import { SaleCard } from "../SaleCard/SaleCard";
 import { ClientCard } from "../ClientCard/ClientCard";
+import { itemTitle } from "../../consts";
 
 type ListOfItems = Array<ProductType> | Array<SaleType> | Array<ClientType>;
 
 type ListOfItemsProps = {
-  type: "PRODUCTS" | "CLIENTS" | "SALES";
+  type: ItemTypes;
   items: ListOfItems;
   isLoading: boolean;
   error: string | null;
@@ -24,13 +25,13 @@ export function ListOfItems({
 
   return (
     <ul className="listOfItems">
-      {type === "PRODUCTS" ? (
+      {type === itemTitle.PRODUCT ? (
         <>
           {items.map((product) => (
             <ProductCard key={product.id} product={product as ProductType} />
           ))}
         </>
-      ) : type === "CLIENTS" ? (
+      ) : type === itemTitle.CLIENT ? (
         <>
           {items.map((client) => (
             <ClientCard key={client.id} client={client as ClientType} />

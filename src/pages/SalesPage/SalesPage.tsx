@@ -37,7 +37,7 @@ export function SalesPage() {
           </label>
         </div>
         <ListOfItems
-          type="SALES"
+          type="sale"
           items={filteredSales}
           isLoading={isLoading}
           error={error}
