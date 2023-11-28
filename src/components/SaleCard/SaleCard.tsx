@@ -24,10 +24,6 @@ export function SaleCard({ sale }: { sale: SaleType }) {
         <p>Fecha</p>
         <small>{sale.date}</small>
       </div>
-      <div className="saleCard--item">
-        <p>Cliente</p>
-        <small>{sale.client}</small>
-      </div>
       <div className="saleCard--buttons">
         <button className="edit">Editar</button>
         <button className="delete">Eliminar</button>
